@@ -101,7 +101,7 @@ def return_average_score_of_n_populations(generations, size_of_generation):
         else:
             for reproduction in range(size_of_generation // 2):
                 list_of_parents = create_parents_from_preset_generation(children, 2)
-                print("list_of_p:", list_of_parents)
+                # print("list_of_p:", list_of_parents)
                 two_children = reproduce_2_childs_with_mutation(list_of_parents[0], list_of_parents[1])
                 current_generation.append(two_children[0])
                 current_generation.append(two_children[1])
@@ -113,7 +113,7 @@ def return_average_score_of_n_populations(generations, size_of_generation):
     return children
 
 
-print(return_average_score_of_n_populations(100, 6))
+print(return_average_score_of_n_populations(10000, 6))
 
 
 # print(create_parents(50, 2))
